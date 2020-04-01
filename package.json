@@ -31,5 +31,8 @@
       "/.cache/",
       "/node_modules"
     ]
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
