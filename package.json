@@ -22,7 +22,8 @@
     "picturefill": "^3.0.3",
     "postcss-modules": "^1.5.0",
     "sass": "^1.26.3",
-    "semistandard": "^14.2.0"
+    "semistandard": "^14.2.0",
+    "normalize.css": "^8.0.1"
   },
   "semistandard": {
     "ignore": [
@@ -31,8 +32,5 @@
       "/.cache/",
       "/node_modules"
     ]
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
   }
 }
