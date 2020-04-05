@@ -3,7 +3,6 @@
 
 body {
   font-family: 'Forum', Georgia, serif;
-  min-width: 280px;
 }
 
 .header {
@@ -99,27 +98,27 @@ body {
 }
 
 .no-js .nav-list {
-  text-align: center;
-  background-color: $color-bg-primary;
-  overflow: scroll;
   display: block;
 }
 
 .js .nav-list {
-  display: none;
   position: absolute;
   top: 3.125em;
-  right: 0;
   bottom: 0;
   left: 0;
-  text-align: center;
-  background-color: $color-bg-primary;
+  right: 0;
+  display: none;
   padding-top: 4.5em;
-  overflow: scroll;
+
+  &.open {
+    display: block;
+  }
 }
 
-.nav-list.open {
-  display: block;
+.nav-list {
+  overflow-y: scroll;
+  text-align: center;
+  background-color: $color-bg-primary;
 }
 
 ul, li {
@@ -134,8 +133,6 @@ li {
   transition: transform 300ms cubic-bezier(.51, .01, .58, 1);
   padding-top: 1.75em;
   padding-bottom: 1.75em;
-  padding-left: 20%;
-  padding-right: 20%;
 }
 
 li:hover {
