@@ -43,6 +43,10 @@ body {
   font-size: 0.75rem;
 }
 
+.no-js .nav__btn-toggle {
+  display: none;
+}
+
 .nav__btn-toggle {
   box-sizing: border-box;
   position: absolute;
