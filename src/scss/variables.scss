@@ -1,2 +1,8 @@
 $color-bg-primary: #3B181E;
 $color-entity-primary: #fff;
+
+@mixin reset-default-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
