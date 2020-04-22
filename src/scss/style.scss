@@ -154,7 +154,14 @@ img {
   z-index: 0;
   padding: 100px 20px;
   text-align: center;
+  background-color: $color-bg-primary;
   background-image: url('../img/section-bg.jpg');
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url('../img/section-bg@2x.jpg');
+  }
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
