@@ -6,3 +6,55 @@ $color-entity-primary: #fff;
   margin: 0;
   list-style: none;
 }
+
+@mixin arrow(
+  $arrowSize: 14px,
+  $arrowBorderSize: 2px,
+  $arrowBarWidth: 2px,
+  $arrowBarHeight: 25px
+) {
+
+  display: inline-block;
+  height: $arrowSize;
+  position: relative;
+  width: $arrowSize;
+
+  &::after {
+    border-bottom-style: solid;
+    border-bottom-width: $arrowBorderSize;
+    border-right-style: solid;
+    border-right-width: $arrowBorderSize;
+    content: '';
+    display: inline-block;
+    height: $arrowSize;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $arrowSize;
+  }
+
+  &::before {
+    bottom: 0;
+    content: '';
+    height: $arrowBarHeight;
+    position: absolute;
+    right: 0;
+    transform-origin: bottom;
+    width: $arrowBarWidth;
+    transform: rotate(-45deg) translate(0, -$arrowBarWidth);
+  }
+
+}
+
+@mixin arrowColor($color) {
+  &,
+  .btn-arrow {
+    &::after {
+      border-color: $color;
+    }
+
+    &::before {
+      background-color: $color;
+    }
+  }
+}
