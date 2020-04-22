@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: 'Forum', Georgia, serif;
+  background-color: $color-bg-primary;
 }
 
 img {
@@ -18,7 +19,6 @@ img {
 }
 
 .header {
-  background-color: $color-bg-primary;
   color: $color-entity-primary;
 }
 
