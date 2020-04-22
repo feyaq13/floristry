@@ -1,6 +1,14 @@
 @import 'variables';
 @import 'normalize.css';
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Forum', Georgia, serif;
 }
@@ -178,7 +186,6 @@ img {
     color: $color-entity-primary;
     font-size: 10px;
     line-height: 11px;
-    text-align: center;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0.4);
@@ -187,6 +194,7 @@ img {
 
 .list-social {
   @include reset-default-list;
+  box-sizing: content-box;
 
   li, a {
     display: inline-block;
@@ -197,17 +205,22 @@ img {
     height: 18px;
     border-radius: 50%;
     background-color: $color-bg-primary;
-    margin: 10px 20px;
   }
 
-  li:not(:first-child) {
-    margin-left: 20px;
-    margin-right: 10px;
+  @media (max-width: 319.98px) {
+    li {
+      margin: 10px;
+    }
   }
 
-  li:not(:last-child) {
-    margin-right: 20px;
-    margin-left: 10px;
+  @media (min-width: 320px) {
+    li:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    li:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 
 }
