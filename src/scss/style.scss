@@ -152,6 +152,7 @@ img {
 .main-section {
   position: relative;
   z-index: 0;
+  margin-bottom: 100px;
   padding: 100px 20px;
   text-align: center;
   background-color: $color-bg-primary;
@@ -265,4 +266,67 @@ img {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.section-catalog {
+  padding: 15px;
+  color: #fff;
+}
+
+.section-catalog__h2 {
+  text-transform: uppercase;
+}
+
+.section-catalog__list-items {
+  @include reset-default-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-items__item {
+  display: inline-block;
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+}
+
+.item__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.item__number,
+.item__hr {
+  display: inline-block;
+}
+
+.item__hr {
+  width: 70px;
+  height: 1px;
+  background-color: #fff;
+  border: none;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.item__number {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.item__title {
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 170%;
 }
