@@ -9,4 +9,5 @@ menuBurger.addEventListener('click', function () {
   this.classList.toggle('active');
   navList.classList.toggle('open');
   document.querySelector('.header__logo').classList.toggle('active-menu');
+  document.body.classList.toggle('body--locked');
 });
