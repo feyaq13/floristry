@@ -330,13 +330,29 @@ img {
   vertical-align: top;
 }
 
-.item__number {
+.item__number,
+.item__title {
   margin: 0;
+}
+
+.item__number {
   vertical-align: middle;
 }
 
 .item__title {
-  margin: 0;
   text-transform: uppercase;
   line-height: 170%;
+}
+
+// <-- Carousel
+
+.carousel-cell {
+  position: absolute;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.carousel-cell.carousel-cell--active {
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
 }
