@@ -3,9 +3,7 @@ import 'regenerator-runtime/runtime'
 const menuBurger = document.querySelector('.nav__btn-toggle');
 const navList = document.querySelector('.nav-list');
 
-(function () {
-  document.body.classList.replace('no-js', 'js')
-})();
+initJS();
 
 menuBurger.addEventListener('click', function () {
   this.classList.toggle('active');
@@ -16,16 +14,16 @@ menuBurger.addEventListener('click', function () {
 
 const carousel = document.getElementsByClassName('section-catalog__carousel')[0];
 const cells = carousel.children;
+carousel.classList.add('section-catalog__carousel--active-mode');
 
-window.onload = function () {
-
+document.addEventListener("DOMContentLoaded", () => {
   (async function autoplay() {
 
     let prevCell;
     for (let i = 0; i < cells.length;) {
 
       await new Promise((resolve) => {
-        setTimeout(resolve, 1000);
+        setTimeout(resolve, 3000);
       });
 
       if (prevCell) {
@@ -44,4 +42,8 @@ window.onload = function () {
       i++
     }
   })();
-};
+});
+
+function initJS() {
+  document.body.classList.replace('no-js', 'js')
+}

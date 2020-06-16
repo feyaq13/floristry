@@ -273,7 +273,7 @@ img {
   transition-duration: 1s;
   transition-property: transform;
   animation-name: pulse;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -292,6 +292,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
 }
 
 .list-items__item {
@@ -346,13 +347,12 @@ img {
 
 // <-- Carousel
 
-.carousel-cell {
+.section-catalog__carousel--active-mode .carousel-cell {
   position: absolute;
   opacity: 0;
-  transition: opacity .5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .carousel-cell.carousel-cell--active {
   opacity: 1;
-  transition: opacity .3s ease-in-out;
 }
