@@ -1,9 +1,9 @@
 import 'regenerator-runtime/runtime'
 
+initJS();
+
 const menuBurger = document.querySelector('.nav__btn-toggle');
 const navList = document.querySelector('.nav-list');
-
-initJS();
 
 menuBurger.addEventListener('click', function () {
   this.classList.toggle('active');
@@ -12,11 +12,11 @@ menuBurger.addEventListener('click', function () {
   document.body.classList.toggle('body--locked');
 });
 
-const carousel = document.getElementsByClassName('section-catalog__carousel')[0];
-const cells = carousel.children;
-carousel.classList.add('section-catalog__carousel--active-mode');
-
 document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementsByClassName('section-catalog__carousel')[0];
+  const cells = carousel.children;
+  carousel.classList.add('section-catalog__carousel--active-mode');
+
   (async function autoplay() {
 
     let prevCell;
