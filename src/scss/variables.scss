@@ -41,7 +41,7 @@ $color-entity-primary: #fff;
     right: 0;
     transform-origin: bottom;
     width: $arrowBarWidth;
-    transform: rotate(-45deg) translate(0, -$arrowBarWidth);
+    transform: rotate(-45deg) translate($arrowBarWidth/2, -$arrowBarWidth);
   }
 
 }

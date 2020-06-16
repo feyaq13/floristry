@@ -135,7 +135,7 @@ img {
 
 .nav-list {
   z-index: 1;
-  overflow: hidden;
+  overflow: hidden auto;
   text-align: center;
   @include reset-default-list;
   color: rgba($color-entity-primary, .5);
@@ -262,21 +262,23 @@ img {
   }
 }
 
-.main-section__btn {
+.main-section__btn-wrapper .btn {
   margin: 16px;
   @include arrow(10px, 1px, 1px, 24px);
   @include arrowColor(#fff);
   transform: rotate(45deg);
 }
 
-.btn-arrow {
+.btn-arrow-wrapper .btn {
   transition-duration: 1s;
   transition-property: transform;
-  animation-name: pulse;
+  //animation-name: pulse;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+// <-- SECTION Catalog
 
 .section-catalog {
   padding: 15px;
@@ -292,6 +294,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -299,6 +302,8 @@ img {
   display: inline-block;
   position: relative;
   margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   img {
     display: block;
@@ -352,8 +357,16 @@ img {
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  margin: 0;
+
+  &:first-child {
+    position: relative;
+  }
 }
 
 .carousel-cell.carousel-cell--active {
   opacity: 1;
 }
+
+// Carousel -->
+// SECTION Catalog -->
