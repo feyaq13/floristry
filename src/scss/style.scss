@@ -278,6 +278,8 @@ img {
   animation-timing-function: linear;
 }
 
+// <-- SECTION Catalog
+
 .section-catalog {
   padding: 15px;
   color: #fff;
@@ -299,6 +301,8 @@ img {
   display: inline-block;
   position: relative;
   margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   img {
     display: block;
@@ -352,8 +356,16 @@ img {
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  margin: 0;
+
+  &:first-child {
+    position: relative;
+  }
 }
 
 .carousel-cell.carousel-cell--active {
   opacity: 1;
 }
+
+// Carousel -->
+// SECTION Catalog -->
