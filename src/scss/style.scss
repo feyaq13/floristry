@@ -21,6 +21,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .header {
@@ -298,6 +299,7 @@ img {
 .list-items__item {
   display: inline-block;
   position: relative;
+  margin-bottom: 20px;
 
   img {
     display: block;
